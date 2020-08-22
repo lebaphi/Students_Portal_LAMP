@@ -5,7 +5,7 @@
 			<div class="kt-footer__wrapper">
 				<div class="kt-footer__logo">
 					<a class="kt-header__brand-logo" href="javascript:;">
-						<img alt="Logo" src="" class="kt-header__brand-logo-sticky">
+						<img alt="Logo" src="../assets/media/logos/default-sm.png" class="kt-header__brand-logo-sticky">
 					</a>
 					<div class="kt-footer__copyright">
 						<span>V <?php echo $appVersion;?></span>&nbsp;

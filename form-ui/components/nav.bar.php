@@ -1,8 +1,8 @@
 <script src="../form-ui/components-scripts/nav.bar.script.js" type="text/javascript"></script>
 <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
 	<a class="kt-header__brand-logo" href="javascript:;">
-		<img alt="Logo" src="" class="kt-header__brand-logo-default brand-logo"/>
-		<img alt="Logo" src="" class="kt-header__brand-logo-sticky"/>
+		<img alt="Logo" src="../assets/media/logos/default-sm.png" class="kt-header__brand-logo-default brand-logo"/>
+		<img alt="Logo" src="../assets/media/logos/default-sm.png" class="kt-header__brand-logo-sticky"/>
 	</a>
 </div>
 
@@ -13,13 +13,12 @@
 <div class="kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_header_menu_wrapper">
 	<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 		<ul class="kt-menu__nav" id="mainNav">
-			
-			<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-				<a href="javascript:;" name="./new-dashboard/dashboard.php" class="kt-menu__link kt-menu__toggle">
-					<span class="kt-menu__link-text">Dashboard</span>
-					<i class="kt-menu__ver-arrow la la-angle-right"></i>
-				</a>
-			</li>
+<!--			<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">-->
+<!--				<a href="javascript:;" name="./dashboard/dashboard.php" class="kt-menu__link kt-menu__toggle">-->
+<!--					<span class="kt-menu__link-text">Dashboard</span>-->
+<!--					<i class="kt-menu__ver-arrow la la-angle-right"></i>-->
+<!--				</a>-->
+<!--			</li>-->
 		</ul>
 	</div>
 </div>
@@ -89,7 +88,7 @@
 		<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl" id="mainProfile">
 			<?php
 			echo '
-			<div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(../assets/media/misc/bg-1.jpg)">
+			<div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(../assets/media/demos/demo8/bg-1.jpg)">
 				<div class="kt-user-card__avatar">
 					<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">
 						' . ucwords($name === '' ? '' : $name[0]) . '

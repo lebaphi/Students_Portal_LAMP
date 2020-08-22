@@ -39,7 +39,7 @@
 	<link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 	
 	<!--end::Layout Skins -->
-	<link rel="shortcut icon" href="../assets/media/logos/t360.sm.png" />
+	<link rel="shortcut icon" href="../assets/media/logos/default-sm.png" />
 </head>
 
 <!-- end::Head -->
@@ -58,7 +58,7 @@
 						</div>
 						<div class="kt-login__logo">
 						<a href="javascript:;">
-							<img src="../assets/media/logos/t360.png" style="height: 80px;">
+							<img src="../assets/media/logos/default.png" style="height: 80px;">
 						</a>
 					</div>
 					
@@ -110,7 +110,7 @@
 				</div>
 				<div class="kt-footer__menu kt-align-center"></div>
 			</div>
-			<div class="kt-footer__menu kt-align-center">© 2020 Tickner 360 - All Rights Reserved. 
+			<div class="kt-footer__menu kt-align-center">© 2020 Co Name - All Rights Reserved.
 </div>
 		</div>
 	</div>

@@ -62,7 +62,7 @@
 		async function loadCurrentUser() {
 			return new Promise(resolve => {
 				sendRequest('formGetCurrentUser', {
-					url: 'new-user/user.php',
+					url: 'user/user.php',
 					method: 'GET'
 				}, (response) => {
 					if (isSuccess(response)) {
@@ -78,7 +78,7 @@
 		
 		function loadDefault(page) {
 			loadCurrentUser().then(() => {
-				loadPage(page ? page : './new-dashboard/dashboard.php', loadPageOption, (response) => {
+				loadPage(page ? page : './dashboard/dashboard.php', loadPageOption, (response) => {
 					if (!response) {
 						loadDefault(page);
 					} else {
@@ -93,13 +93,13 @@
 	});
 </script>
 
-<body style="background-image: url(../assets/media/demos/demo4/header.jpg); background-position: center top; background-size: 100% 350px;"
+<body style="background-image: url(../assets/media/demos/demo8/bg-1.jpg); background-position: center top; background-size: 100% 350px;"
       class="kt-page--loading-enabled kt-page--loading kt-page--fixed kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-menu kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
 <div id="kt_header_mobile" class="kt-header-mobile kt-header-mobile--fixed ">
 	<div class="kt-header-mobile__logo">
 		<a href="index.php">
-			<img alt="Logo" src=""/>
+			<img alt="Logo" src="../assets/media/logos/default-sm.png"/>
 		</a>
 	</div>
 	<div class="kt-header-mobile__toolbar">

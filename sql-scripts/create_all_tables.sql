@@ -24,6 +24,33 @@ CREATE TABLE `users`
 
 /*****/
 
-INSERT INTO users (deleted, email, username, password, role, created_date, last_logged_in, first_name, last_name, company, title, phone, address, city, province, country, avatar, session_id) VALUES (0, 'admin@gmail.com', 'admin', '$2y$10$z4Dntjs0wOp2lEQojGhAhuf76/TaXj3qMmhsb/TKFmoUY.yKvxYHe', 'admin', '', '','', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO users (deleted, email, username, password, role, created_date, last_logged_in, first_name, last_name, company, title, phone, address, city, province, country, avatar, session_id)
+VALUES (0, 'admin@gmail.com', 'admin', '$2y$10$z4Dntjs0wOp2lEQojGhAhuf76/TaXj3qMmhsb/TKFmoUY.yKvxYHe', 'admin', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 /*****/
+
+CREATE TABLE `students`
+(
+    `id`                INT          NOT NULL AUTO_INCREMENT,
+    `deleted`           INT(1)       NOT NULL,
+    `gender`            VARCHAR(10)  NOT NULL,
+    `religion`          VARCHAR(255) NOT NULL,
+    `nationality`       VARCHAR(255) NOT NULL,
+    `residence_country` VARCHAR(255) NOT NULL,
+    `data`              VARCHAR(255) NOT NULL,
+    `residence_city`    VARCHAR(255) NOT NULL,
+    `cell_number`       VARCHAR(255) NOT NULL,
+    `email`             VARCHAR(255) NOT NULL,
+    `computer`          VARCHAR(255) NOT NULL,
+    `english`           VARCHAR(255) NOT NULL,
+    `last_degree`       VARCHAR(255) NOT NULL,
+    `education_level`   VARCHAR(255) NOT NULL,
+    `specialization`    VARCHAR(255) NOT NULL,
+    `inst_level_name`   VARCHAR(255) NOT NULL,
+    `inst_name`         VARCHAR(255) NOT NULL,
+    `grade_name`        VARCHAR(255) NOT NULL,
+    `course`            VARCHAR(255) NOT NULL,
+    `remarks_by_akeb`   VARCHAR(255) NOT NULL,
+    `academic_year`     VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`)
+);
