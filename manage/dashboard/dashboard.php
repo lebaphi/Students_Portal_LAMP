@@ -9,6 +9,7 @@
 	
 	require_once '../utils/utils.php';
 	require_once '../../services/UserService.php';
+	require_once '../../services/MailerService.php';
 	require_once '../../assets/vendors/custom/moment/vendor/autoload.php';
 	
 	\Moment\Moment::setDefaultTimezone('UTC');
@@ -53,6 +54,9 @@
 				'remarks_by_akeb' => $_POST['remarks_by_akeb'],
 				'academic_year' => $_POST['academic_year'],
 				'mode' => $_POST['mode']);
+			if ($data['mode'] === 'update'){
+				MailerService::getInstance()->send('User <b>' . $data['email'] . ' has been updated</b>');
+			}
 			UserService::getInstance()->addStudent($data);
 			sendResponse(RESULT_OK, MSG_SUCCESS);
 		} else if ($action === 'getStudents'){
