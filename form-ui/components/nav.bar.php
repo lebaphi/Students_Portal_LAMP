@@ -19,6 +19,37 @@
 <!--					<i class="kt-menu__ver-arrow la la-angle-right"></i>-->
 <!--				</a>-->
 <!--			</li>-->
+			<li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+				<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+					<span class="kt-menu__link-text">Manage</span>
+					<i class="kt-menu__ver-arrow la la-angle-right"></i>
+				</a>
+				<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+					<ul class="kt-menu__subnav">
+						<?php
+							if ($currentUser->isAdmin()){
+								echo '
+								<li class="kt-menu__item " aria-haspopup="true">
+									<a href="javascript:;" name="./user/user.php" class="kt-menu__link ">
+										<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+											<span></span>
+										</i>
+										<span class="kt-menu__link-text">User</span>
+									</a>
+								</li>';
+							}
+						?>
+						<li class="kt-menu__item " aria-haspopup="true">
+							<a href="javascript:;" name="./dashboard/dashboard.php" class="kt-menu__link ">
+								<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+									<span></span>
+								</i>
+								<span class="kt-menu__link-text">Student</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>

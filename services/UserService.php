@@ -36,7 +36,7 @@
 		 * @param $include_soft_user
 		 * @return bool|mysqli_result|null
 		 */
-		function getAllUsers($include_soft_user = false)
+		function getAllUsers()
 		{
 			if ($this->getCurrentUser()->isAdmin()) {
 				$roles = array("admin", "user");
@@ -47,6 +47,26 @@
 				$sql = 'SELECT * FROM users WHERE role IN ("NONE") ORDER BY last_logged_in DESC';
 				return DatabaseService::getInstance()->doQuery($sql, array());
 			}
+		}
+		
+		/**
+		 * @param $uId
+		 * @return bool|mysqli_result|null
+		 */
+		function deleteUserById($uId)
+		{
+			$sql = 'DELETE FROM users WHERE id = ?';
+			return DatabaseService::getInstance()->doQuery($sql, array($uId));
+		}
+		
+		/**
+		 * @param $data
+		 * @return bool|mysqli_result|null
+		 */
+		function updateUser($data)
+		{
+			$sql = 'UPDATE users SET title = ?, first_name = ?, last_name = ?, role = ?, deleted = ?, address = ?, city = ?, province = ?, country = ?, company = ?, phone = ? WHERE id = ?';
+			return DatabaseService::getInstance()->doQuery($sql, array($data['title'], $data['first_name'], $data['last_name'], $data['role'], $data['deleted'], $data['address'], $data['city'], $data['province'], $data['country'], $data['company'], $data['phone'], $data['id']));
 		}
 		
 		/**

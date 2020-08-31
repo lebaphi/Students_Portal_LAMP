@@ -25,7 +25,7 @@ CREATE TABLE `users`
 /*****/
 
 INSERT INTO users (deleted, email, username, password, role, created_date, last_logged_in, first_name, last_name, company, title, phone, address, city, province, country, avatar, session_id)
-VALUES (0, 'admin@gmail.com', 'admin', '$2y$10$z4Dntjs0wOp2lEQojGhAhuf76/TaXj3qMmhsb/TKFmoUY.yKvxYHe', 'admin', '', '', '', '', '', '', '', '', '', '', '', '', '');
+VALUES (0, 'your_admin_email', 'Sharman', '$2y$10$z4Dntjs0wOp2lEQojGhAhuf76/TaXj3qMmhsb/TKFmoUY.yKvxYHe', 'admin', '', '', 'Sharman', 'Sherlander', '', '', '', '', '', '', '', '', '');
 
 /*****/
 

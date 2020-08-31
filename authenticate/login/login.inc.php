@@ -14,7 +14,7 @@
 		function login($email, $password, $remember)
 		{
 			$conn = DatabaseService::getInstance()->connect();
-			$sql = 'SELECT * FROM users WHERE email = ? AND deleted = ? AND role IN ("admin")';
+			$sql = 'SELECT * FROM users WHERE email = ? AND deleted = ? AND role IN ("admin", "user")';
 			$stmt = mysqli_stmt_init($conn);
 			if (!mysqli_stmt_prepare($stmt, $sql)) {
 				print_r(json_encode(array('status' => CODE_SERVER_ERROR, 'msg' => 'Server error')));

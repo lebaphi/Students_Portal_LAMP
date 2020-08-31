@@ -299,3 +299,20 @@ function formConfirm(title, msgText, form, options, cb) {
 		}
 	});
 }
+
+/**
+ * set element visibility
+ * @param element or elementId
+ * @param visible
+ */
+function setElementVisible(element, visible) {
+	let elm = element;
+	if (typeof element === 'string') {
+		elm = getElmById(element);
+	}
+	if (visible) {
+		$(elm).show();
+	} else {
+		$(elm).hide();
+	}
+}

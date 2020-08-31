@@ -141,3 +141,115 @@
 		</div>
 	</div>
 </div>
+
+<button type="button" class="none-display" id="openUserProfileModal" data-backdrop="static" data-toggle="modal" data-target="#openUserProfileTarget"></button>
+<div class="modal fade" id="openUserProfileTarget" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<form id="profile_user_form" onsubmit="saveUserProfile(this); return false;">
+				<div class="modal-header">
+					<h4>User Profile</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Title</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="title" placeholder="Title">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">First Name</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="first_name" placeholder="First Name">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Last Name</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="last_name" placeholder="Last Name">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Address</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="address" placeholder="Address">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">City</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="city" placeholder="City">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Province/State</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="province" placeholder="Province">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Country</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="country" placeholder="Country">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Company Name</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<input class="form-control" type="text" name="company" placeholder="Company">
+						</div>
+					</div>
+					<div class="form-group row" id="user_section_edit_role">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">User Role</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<select class="form-control" name="role">
+								<option value="user">User</option>
+								<?php
+									if ($currentUser->isAdmin()){
+										echo '<option value="admin">Admin</option>';
+									}
+								?>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">User Status</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<select class="form-control" name="deleted">
+								<option value="0">Active</option>
+								<option value="1">Inactive</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Contact Phone</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<div class="input-group">
+								<div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
+								<input type="text" class="form-control" name="phone" placeholder="Phone" aria-describedby="basic-addon1">
+							</div>
+							<span class="form-text text-muted">We'll never share your email with anyone else.</span>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-xl-3 col-lg-3 col-md-3 col-form-label kt-align-right">Email Address</label>
+						<div class="col-lg-9 col-xl-6 col-md-9">
+							<div class="input-group">
+								<div class="input-group-prepend"><span class="input-group-text"><i class="la la-at"></i></span></div>
+								<input type="text" disabled class="form-control" name="email" placeholder="Email" aria-describedby="basic-addon1">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<input type="hidden" name="action" value="updateUser">
+					<button type="button" class="btn btn-brand btn-elevate" onclick="saveUserProfile(this)">Update</button>
+					<button type="button" class="btn btn-secondary btn-elevate" id="btnCloseUpdateUserInfo" data-dismiss="modal">Close</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
