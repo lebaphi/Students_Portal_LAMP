@@ -13,6 +13,7 @@
 	define('CODE_SERVER_FORBIDDEN', 403);
 	
 	define('ADMIN', 'admin');
+	define('USER_NORMAL', 'user');
 	
 	define('ACCESS_DENIED', '0x00');
 	define('SQL_ERROR', '0x01');

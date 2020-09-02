@@ -191,13 +191,18 @@ function loadStudents(){
 			if (isSuccess(response)) {
 				const processedData = response.data.map((item) => {
 					const { id, gender, email, nationality, last_degree, education_level, grade_name, course, academic_year } = item
-					const actionElm = '' +
-						'<a href="javascript:;" class="dropdown-item" onclick="edit(' + id + ')">' +
-						'<i class="flaticon2-edit button-icon"></i>Edit' +
-						'</a>' +
-						'<a href="javascript:;" class="dropdown-item" onclick="remove(' + id + ')">' +
-						'<i class="flaticon2-trash button-icon"></i>Remove' +
-						'</a>';
+					const currentUser = getRouteVariable(COMMON, 'currentUser')
+					let actionElm = ''
+					if (currentUser && currentUser.role === 'admin') {
+						actionElm +=	'<a href="javascript:;" class="dropdown-item" onclick="edit(' + id + ')">' +
+							'<i class="flaticon2-edit button-icon"></i>Edit' +
+							'</a>' +
+							'<a href="javascript:;" class="dropdown-item" onclick="remove(' + id + ')">' +
+							'<i class="flaticon2-trash button-icon"></i>Remove' +
+							'</a>';
+					} else {
+						actionElm = '<a href="javascript:;" class="dropdown-item"><i class="la la-stop"></i>No action</a>'
+					}
 					return ['', gender, email, nationality, last_degree, education_level, grade_name, course, academic_year, wrapMenuAction(actionElm)]
 				})
 				const table = getRouteVariable(DASHBOARD_ROUTE, 'studentTable')

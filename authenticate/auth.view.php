@@ -53,18 +53,9 @@
 		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
 			<div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper" style="background-image: url(../assets/media/bg/bg-2.jpg);border-radius: 40px; margin-top: 20px">
 				<div class="kt-login__container">
-					<div class="kt-login__head">
-							<h2 class="kt-login__title">Title | Login</h2>
-						</div>
-						<div class="kt-login__logo">
-						<a href="javascript:;">
-							<img src="../assets/media/logos/default.png" style="height: 80px;">
-						</a>
-					</div>
-					
 					<div class="kt-login__signin">
-						<div class="kt-login__container kt-align-center">
-							<h3 class=""></h3>
+						<div class="kt-login__head">
+							<h3 class="kt-login__title">Login</h3>
 						</div>
 						<form class="kt-form">
 							<div class="input-group">
@@ -74,19 +65,53 @@
 								<input class="form-control" type="password" placeholder="Password" name="password">
 							</div>
 							<div class="row kt-login__extra">
-								<div class="col">
-									<label class="kt-checkbox">
-										<input type="checkbox" name="remember"> Keep Session Active
-										<span></span>
-									</label>
-								</div>
-								<div class="col kt-align-right">
-									<a href="javascript:;" id="kt_login_forgot" class="kt-login__link">Forget Password ?</a>
-								</div>
+<!--								<div class="col">-->
+<!--									<label class="kt-checkbox">-->
+<!--										<input type="checkbox" name="remember"> Keep Session Active-->
+<!--										<span></span>-->
+<!--									</label>-->
+<!--								</div>-->
+<!--								<div class="col kt-align-right">-->
+<!--									<a href="javascript:;" id="kt_login_forgot" class="kt-login__link">Forget Password ?</a>-->
+<!--								</div>-->
 							</div>
 							<div class="kt-login__actions">
 								<input type="hidden" name="loginSubmit">
 								<button id="kt_login_signin_submit" name="loginSubmit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign In</button>
+							</div>
+						</form>
+					</div>
+					<div class="kt-login__signup">
+						<div class="kt-login__head">
+							<h3 class="kt-login__title">Sign Up</h3>
+							<div class="kt-login__desc">Enter your details to create your account:</div>
+						</div>
+						<form class="kt-form">
+							<div class="input-group">
+								<input class="form-control" type="text" placeholder="Fullname" name="username">
+							</div>
+							<div class="input-group">
+								<input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
+							</div>
+							<div class="input-group">
+								<input class="form-control" type="password" placeholder="Password" name="password">
+							</div>
+							<div class="input-group">
+								<input class="form-control" type="password" placeholder="Confirm Password" name="rpassword">
+							</div>
+							<div class="row kt-login__extra">
+								<div class="col kt-align-left">
+									<label class="kt-checkbox">
+										<input type="checkbox" name="agree">I Agree the <a href="#" class="kt-link kt-login__link kt-font-bold">terms and conditions</a>.
+										<span></span>
+									</label>
+									<span class="form-text text-muted"></span>
+								</div>
+							</div>
+							<div class="kt-login__actions">
+								<input type="hidden" name="signUpSubmit">
+								<button id="kt_login_signup_submit" class="btn btn-brand btn-pill kt-login__btn-primary">Sign Up</button>&nbsp;&nbsp;
+								<button id="kt_login_signup_cancel" class="btn btn-secondary btn-pill kt-login__btn-secondary">Cancel</button>
 							</div>
 						</form>
 					</div>
@@ -106,6 +131,13 @@
 								<button id="kt_login_forgot_cancel" class="btn btn-secondary btn-pill kt-login__btn-secondary">Cancel</button>
 							</div>
 						</form>
+					</div>
+					<div class="kt-login__account">
+						<span class="kt-login__account-msg">
+							Don't have an account yet ?
+						</span>
+						&nbsp;&nbsp;
+						<a href="javascript:;" id="kt_login_signup" class="kt-login__account-link">Sign Up!</a>
 					</div>
 				</div>
 				<div class="kt-footer__menu kt-align-center"></div>

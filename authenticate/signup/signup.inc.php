@@ -43,7 +43,7 @@
 							exit();
 						}
 					} else {
-						$sql = 'INSERT INTO users(deleted, email, password, username, role, createdDate) VALUES (?, ?, ?, ?, ?, ?)';
+						$sql = 'INSERT INTO users(deleted, email, password, username, role, created_date) VALUES (?, ?, ?, ?, ?, ?)';
 						$stmt = mysqli_stmt_init($conn);
 						if (!mysqli_stmt_prepare($stmt, $sql)) {
 							print_r(json_encode(array('status' => CODE_SERVER_ERROR, 'msg' => 'Server error')));
